@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"fmt"
-	"github.com/cbonello/revel-csrf/samples/demo/app/routes"
+	"github.com/AtScaleInc/revel-csrf/samples/demo/app/routes"
 	"github.com/revel/revel"
 )
 

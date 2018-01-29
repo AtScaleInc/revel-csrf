@@ -9,11 +9,11 @@ Code is based on the `nosurf` package implemented by
 
 ## Installation
 
-    go get github.com/cbonello/revel-csrf
+    go get github.com/AtScaleInc/revel-csrf
 
 A demo application is provided in the samples directory. To launch it:
 
-    revel run github.com/cbonello/revel-csrf/samples/demo
+    revel run github.com/AtScaleInc/revel-csrf/samples/demo
 
 ## Configuration options
 
@@ -32,7 +32,7 @@ Simply call the CSRFFilter() filter in `app/init.go`.
     package app
 
     import (
-        "github.com/cbonello/revel-csrf"
+        "github.com/AtScaleInc/revel-csrf"
         "github.com/revel/revel"
     )
 
