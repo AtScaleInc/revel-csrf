@@ -35,7 +35,10 @@ var CSRFFilter = func(c *revel.Controller, fc []revel.Filter) {
 	if !found {
 		realToken = generateNewToken(c)
 	} else {
-		realToken = tokenCookie
+		// With revel 0.21, c.Session is map[string]interface{}, so we have to capture the string value in an interface type
+		// before assigning it to the 'realToken' variable.
+		tokenValueHolder := tokenCookie.(string)
+		realToken = tokenValueHolder
 		if len(realToken) != lengthCSRFToken {
 			// Wrong length; token has either been tampered with, we're migrating
 			// onto a new algorithm for generating tokens, or a new session has
